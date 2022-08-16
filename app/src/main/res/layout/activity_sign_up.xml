@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".SignUp"
+        android:orientation="vertical"
+        android:background="#fff"
+        android:padding="20dp"
+    >
+
+    <ImageView
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        app:srcCompat="@drawable/splash"
+        android:id="@+id/signUplogo"
+        android:layout_gravity="right"
+        android:transitionName="logo_image"
+    />
+
+        <TextView
+            android:id="@+id/signUpslogan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
+            android:text="@string/welcome"
+            android:textColor="#000"
+            android:textSize="40sp"
+            android:transitionName="logo_text" />
+
+        <TextView
+            android:id="@+id/signuptocontinue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_slab"
+            android:text="@string/signUp"
+            android:textSize="18sp"
+            android:transitionName="logo_desc" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="15dp"
+    >
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:id="@+id/name"
+            android:transitionName="field_email"
+            android:hint="@string/name"
+            android:padding="15dp"
+            android:textSize="18sp"
+            android:background="@drawable/field_round"
+            android:inputType="textPersonName"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/signUpEmail"
+            android:background="@drawable/field_round"
+            android:padding="15dp"
+            android:layout_marginTop="7dp"
+            android:textSize="18sp"
+            android:transitionName="field_email"
+            android:hint="Email"
+            android:inputType="textEmailAddress"/>
+
+        <com.scottyab.showhidepasswordedittext.ShowHidePasswordEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/field_round"
+            android:padding="15dp"
+            android:textSize="18sp"
+            android:layout_marginTop="9dp"
+            app:drawable_hide="@drawable/ic_visibility_black_24dp"
+            app:drawable_show="@drawable/ic_visibility_off_black_24dp"
+            android:id="@+id/newPassword"
+            android:transitionName="field_pass"
+            android:hint="@string/placeholder_pass"
+            android:inputType="textPassword"/>
+
+        <com.scottyab.showhidepasswordedittext.ShowHidePasswordEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/confirmPassword"
+            android:background="@drawable/field_round"
+            android:padding="15dp"
+            android:textSize="18sp"
+            android:layout_marginTop="9dp"
+            app:drawable_hide="@drawable/ic_visibility_black_24dp"
+            app:drawable_show="@drawable/ic_visibility_off_black_24dp"
+            android:hint="@string/confirmPass"
+            android:transitionName="forgot_trans"
+            android:inputType="textPassword"/>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/signUp_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/login_btn_gradient"
+        android:onClick="registerUser"
+        android:text="Sign Up"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        android:transitionName="btn_login" />
+    <Button
+        android:id="@+id/back_to_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/haveAcc"
+        android:textSize="15sp"
+        android:transitionName="new_user"
+        android:background="#00000000"
+        />
+
+    </LinearLayout>
+</ScrollView>
+

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#AF33E4</color>
+    <color name="colorAccent">#000000</color>
+
+
+    <!-- Wave Header -->
+    <color name="wave_start_color">#da22ff</color>
+    <color name="wave_close_color">#9733ee</color>
+    <color name="dot_color">#E66407</color>
+</resources>

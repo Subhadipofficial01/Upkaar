@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    >
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#00000000"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/menu">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:gravity="center_horizontal"
+            >
+            <TextView
+                android:id="@+id/toolbar_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textSize="30sp"
+                android:layout_marginEnd="70dp"
+                android:layout_marginStart="80dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:fontFamily="@font/roboto_slab"
+                />
+            <Button
+                android:id="@+id/logout_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:drawableStart="@drawable/ic_power_settings_new_black_24dp"
+                android:background="#00000000"
+                android:gravity="right"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/toolbar_heading"
+                />
+
+        </RelativeLayout>
+
+
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/home_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/playfair_display_bold"
+        android:gravity="center"
+        android:text="@string/home_title"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/home_slogan"
+        app:layout_constraintEnd_toStartOf="@+id/lottieAnimationView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <TextView
+        android:id="@+id/home_slogan"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:fontFamily="@font/open_sans"
+        android:gravity="center"
+        android:text="@string/home_slogan"
+        android:textColor="#343434"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/lottieAnimationView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/home_title" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieAnimationView"
+        android:layout_width="204dp"
+        android:layout_height="161dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/home_title"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="fightCorona.json"
+        app:lottie_loop="true" />
+
+    <TextView
+        android:id="@+id/category"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/roboto_slab"
+        android:gravity="center"
+        android:text="@string/categories"
+        android:textSize="30sp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/layout_parent"
+        app:layout_constraintTop_toBottomOf="@+id/lottieAnimationView" />
+    <ScrollView
+        android:id="@+id/layout_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/category"
+        >
+
+        <LinearLayout
+            android:id="@+id/layout_parent_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/category">
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/category">
+
+                <com.skydoves.transformationlayout.TransformationLayout
+                    android:id="@+id/transformationLayout_0"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:transformation_duration="550">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/food_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:onClick="cardAnimatin"
+                        app:cardCornerRadius="30dip"
+                        app:cardElevation="20dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/imageView5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/donate_food" />
+
+                            <LinearLayout
+                                android:id="@+id/layout_view"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/card_background"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:visibility="gone">
+
+                                <LinearLayout
+                                    android:id="@+id/view_container"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:visibility="gone">
+
+                                    <TextView
+                                        android:id="@+id/donate_btn"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/card_button"
+                                        android:backgroundTint="#00000000"
+                                        android:fontFamily="@font/audiowide"
+                                        android:text="Food"
+                                        android:textColor="#434343"
+                                        android:textSize="40sp" />
+
+                                    <Button
+                                        android:id="@+id/cncl_btn"
+                                        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:onClick="cancelBtn"
+                                        android:text="Cancel"
+                                        android:textColor="#fff"
+                                        android:textSize="18sp" />
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+                </com.skydoves.transformationlayout.TransformationLayout>
+
+                <com.skydoves.transformationlayout.TransformationLayout
+                    android:id="@+id/transformationLayout_1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:transformation_direction="auto"
+                    app:transformation_duration="550"
+                    app:transformation_fadeMode="cross"
+                    app:transformation_pathMode="arc">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/money_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:onClick="cardAnimatin_1"
+                        app:cardCornerRadius="30dip"
+                        app:cardElevation="20dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/imageView6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="125sp"
+                                android:layout_marginTop="12dp"
+                                android:padding="5dp"
+                                app:srcCompat="@drawable/fund_raising" />
+
+                            <LinearLayout
+                                android:id="@+id/layout_view_1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/card_background_2"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:visibility="gone">
+
+                                <LinearLayout
+                                    android:id="@+id/view_container_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:visibility="gone">
+
+                                    <TextView
+                                        android:id="@+id/donate_btn_1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/card_button"
+                                        android:backgroundTint="#00000000"
+                                        android:fontFamily="@font/audiowide"
+
+                                        android:text="Money"
+                                        android:textColor="#000"
+                                        android:textSize="32sp" />
+
+                                    <Button
+                                        android:id="@+id/cncl_btn_1"
+                                        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:onClick="cancelBtn_1"
+                                        android:text="Cancel"
+                                        android:textColor="#fff"
+                                        android:textSize="18sp" />
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </com.skydoves.transformationlayout.TransformationLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+                <com.skydoves.transformationlayout.TransformationLayout
+                    android:id="@+id/transformationLayout_2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:transformation_duration="550">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/book_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:onClick="cardAnimatin_2"
+                        app:cardCornerRadius="30dip"
+
+                        app:cardElevation="20dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/imageView7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                                app:srcCompat="@drawable/donate_books" />
+
+                            <LinearLayout
+                                android:id="@+id/layout_view_2"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/card_background_2"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:visibility="gone">
+
+                                <LinearLayout
+                                    android:id="@+id/view_container_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:visibility="gone">
+
+                                    <TextView
+                                        android:id="@+id/donate_btn_2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/card_button"
+                                        android:backgroundTint="#00000000"
+                                        android:fontFamily="@font/audiowide"
+
+                                        android:text="Books"
+                                        android:textColor="#434343"
+                                        android:textSize="40sp" />
+
+                                    <Button
+                                        android:id="@+id/cncl_btn_2"
+                                        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:onClick="cancelBtn_2"
+                                        android:text="Cancel"
+                                        android:textColor="#fff"
+                                        android:textSize="18sp" />
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </com.skydoves.transformationlayout.TransformationLayout>
+
+                <com.skydoves.transformationlayout.TransformationLayout
+                    android:id="@+id/transformationLayout_3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:transformation_duration="550">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/games_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:onClick="cardAnimatin_3"
+                        app:cardCornerRadius="30dip"
+                        app:cardElevation="20dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/imageView8"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:padding="3dp"
+                                android:scaleType="centerInside"
+                                app:srcCompat="@drawable/games" />
+
+                            <LinearLayout
+                                android:id="@+id/layout_view_3"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/card_background"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:visibility="gone">
+
+                                <LinearLayout
+                                    android:id="@+id/view_container_3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:visibility="gone">
+
+                                    <TextView
+                                        android:id="@+id/donate_btn_3"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/card_button"
+                                        android:backgroundTint="#00000000"
+                                        android:fontFamily="@font/audiowide"
+
+                                        android:text="Games"
+                                        android:textColor="#000"
+                                        android:textSize="32sp" />
+
+                                    <Button
+                                        android:id="@+id/cncl_btn_3"
+                                        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:onClick="cancelBtn_3"
+                                        android:text="Cancel"
+                                        android:textColor="#fff"
+                                        android:textSize="18sp" />
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </com.skydoves.transformationlayout.TransformationLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.scwang.wave.MultiWaveHeader
+            android:id="@+id/waveHeader"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleY="-1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:mwhCloseColor="@color/wave_close_color"
+            app:mwhColorAlpha="0.45"
+            app:mwhGradientAngle="45"
+            app:mwhIsRunning="true"
+            app:mwhProgress="1"
+            app:mwhStartColor="@color/wave_start_color"
+            app:mwhVelocity="1"
+            app:mwhWaveHeight="50dp"
+            app:mwhWaves="MultiWave" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

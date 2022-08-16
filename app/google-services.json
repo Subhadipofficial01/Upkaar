@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "353202431119",
+    "firebase_url": "https://upkaar-df495.firebaseio.com",
+    "project_id": "upkaar-df495",
+    "storage_bucket": "upkaar-df495.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:353202431119:android:7716fcb719ad07e3c63cfa",
+        "android_client_info": {
+          "package_name": "com.myapp.UpkaarApp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "353202431119-g0kr4tlbm4s0ttnmo3n6bm6qf74b4t70.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.myapp.UpkaarApp",
+            "certificate_hash": "492b1ab1ce8e541981be7a0abaf4d3db45f8813b"
+          }
+        },
+        {
+          "client_id": "353202431119-gjqlfaav3ehn4t78et5e5t43iakhmk8t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEsUF31mjf2Pgzcs-09yhOnmjGQ2wkIBI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "353202431119-gjqlfaav3ehn4t78et5e5t43iakhmk8t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

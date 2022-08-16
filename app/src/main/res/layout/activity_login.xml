@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login"
+    android:orientation="vertical"
+    android:background="#fff"
+    android:padding="20dp">
+    <ImageView
+        android:id="@+id/logoImage"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:transitionName="logo_image"
+        app:srcCompat="@drawable/splash"/>
+    <TextView
+        android:id="@+id/logo_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login"
+        android:textSize="40sp"
+        android:textColor="#000"
+        android:transitionName="logo_text"
+        android:fontFamily="@font/montserrat"/>
+    <TextView
+        android:id="@+id/slogan_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/signIn"
+        android:textSize="20sp"
+        android:transitionName="logo_desc"
+        android:fontFamily="@font/open_sans_bold"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="2dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="30dp"
+            android:orientation="vertical">
+
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/username"
+                style="@style/TextAppearance.AppCompat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/field_round"
+                android:hint="@string/placeholder_user"
+                android:padding="15dp"
+                android:textSize="18sp"
+                android:inputType="textEmailAddress"
+                android:transitionName="field_email"
+                />
+
+            <com.scottyab.showhidepasswordedittext.ShowHidePasswordEditText
+                android:id="@+id/password"
+                style="@style/TextAppearance.AppCompat"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/field_round"
+                android:hint="@string/placeholder_pass"
+                android:padding="15dp"
+                android:textSize="18sp"
+                app:drawable_hide="@drawable/ic_visibility_black_24dp"
+                app:drawable_show="@drawable/ic_visibility_off_black_24dp"
+                android:inputType="textPassword"
+                android:transitionName="field_pass"
+                />
+            <Button
+                android:id="@+id/forgot_btn"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="@string/forgot_pass"
+                android:background="#00000000"
+                android:layout_margin="5dp"
+                android:textColor="#000"
+                android:textSize="16sp"
+                android:transitionName="forgot_trans"
+                android:fontFamily="@font/roboto_slab"
+                android:layout_gravity="right"
+                android:elevation="0dp"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/submit"
+                android:id="@+id/login_btn"
+                android:textSize="20sp"
+                android:background="@drawable/login_btn_gradient"
+                android:textColor="#fff"
+                android:layout_marginTop="5dp"
+                android:onClick="loginUser"
+                android:transitionName="btn_login"
+                android:layout_marginBottom="5dp"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_margin="5dp"
+                android:transitionName="new_user"
+                android:background="#00000000"
+                android:elevation="0dp"
+                android:id="@+id/signUP"
+                android:text="@string/new_user"
+                android:fontFamily="@font/roboto_slab"
+                android:textColor="#000"/>
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/loading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:lottie_fileName="loadingDots.json"
+                app:lottie_loop="true"
+                android:visibility="gone"
+                />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+
+
+
+</LinearLayout>

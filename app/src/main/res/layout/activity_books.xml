@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/bgbook"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:srcCompat="@drawable/moneydonation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/splashSlogan_book"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/audiowide"
+        android:gravity="center"
+        android:text="Books"
+        android:textColor="#fff"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/bookHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/scrollView"
+        >
+
+        <RelativeLayout
+            android:id="@+id/topView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/moneydonation"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/donate_books_slogan"
+                android:layout_width="match_parent"
+                android:layout_height="69dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="48dp"
+                android:layout_marginEnd="0dp"
+                android:fontFamily="@font/amita"
+                android:gravity="center"
+                android:text="@string/Food_quote"
+                android:textColor="#fff"
+                android:textSize="40dp"
+                android:visibility="gone" />
+
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/headerCurve"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/bgmoney"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/topView"
+            tools:layout_editor_absoluteY="100dp" />
+
+
+    </LinearLayout>
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bookHeader">
+
+        <LinearLayout
+            android:id="@+id/book_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bookHeader">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/open_sans_bold"
+                android:gravity="center"
+                android:text="@string/fill_form"
+                android:textSize="35dp" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/book_donation_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/donation_field2"
+                android:hint="@string/donator_s_name"
+                android:inputType="textPersonName"
+                android:padding="12dp" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/book_donation_ph"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/donation_field2"
+                android:hint="@string/donator_s_ph"
+                android:inputType="phone"
+                android:padding="12dp" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/book_donation_address"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/donation_field2"
+                android:gravity="top"
+                android:hint="@string/donator_s_address"
+                android:inputType="textMultiLine"
+                android:padding="12dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/donation_details"
+                android:textSize="25sp"
+                android:gravity="center"
+
+                />
+
+            <LinearLayout
+                android:id="@+id/dynamic_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/donation_book_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/donation_field2"
+                    android:hint="@string/book_name"
+                    android:padding="12dp" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/donation_book_author"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/donation_field2"
+                    android:hint="@string/book_author_name"
+                    android:padding="12dp" />
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/donation_book_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/donation_field2"
+                    android:hint="@string/book_type"
+                    android:padding="12dp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal">
+
+                    <TextView
+                        android:id="@+id/amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_alignParentTop="true"
+                        android:text="No. of Copy(s):"
+                        android:textSize="20sp" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/no_booktextfields"
+                        android:layout_width="70dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="8dp"
+                        android:textSize="20sp"
+                        android:padding="5dp"
+                        android:inputType="number"
+                        android:layout_alignParentTop="true"
+                        android:layout_toEndOf="@id/amount"
+                        android:background="@drawable/donation_field2" />
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/donation_comments"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/donation_field2"
+                android:gravity="top"
+                android:hint="@string/donator_s_comments"
+                android:inputType="textMultiLine"
+                android:padding="12dp" />
+            <View style="@style/Divider2"
+                android:layout_marginTop="18dp"
+                />
+            <Button
+                android:id="@+id/donate_book_final"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Donate"
+                android:textSize="23sp"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/open_sans"
+                android:background="@drawable/card_background_2"
+                />
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
